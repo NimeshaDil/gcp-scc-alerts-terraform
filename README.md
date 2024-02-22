@@ -72,3 +72,11 @@ Please note that you need to have the appropriate permissions to create and mana
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Terraform Graph
+
+![graph](images/graph.png)
+
+This graph was generated using [Graphviz](https://graphviz.org/).
