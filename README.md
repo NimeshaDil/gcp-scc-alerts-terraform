@@ -80,3 +80,53 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ![graph](images/graph.png)
 
 This graph was generated using [Graphviz](https://graphviz.org/).
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 4.34.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_google"></a> [google](#provider\_google) | >= 4.34.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_project-factory_project_services"></a> [project-factory\_project\_services](#module\_project-factory\_project\_services) | terraform-google-modules/project-factory/google//modules/project_services | 14.2.0 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [google_cloudfunctions2_function.function](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloudfunctions2_function) | resource |
+| [google_logging_metric.logging_metric](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/logging_metric) | resource |
+| [google_monitoring_alert_policy.my_policy](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/monitoring_alert_policy) | resource |
+| [google_project_iam_binding.project](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_binding) | resource |
+| [google_pubsub_topic.topic](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/pubsub_topic) | resource |
+| [google_storage_bucket.bucket](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
+| [google_storage_bucket_object.object](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_object) | resource |
+| [random_id.bucket_prefix](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_alert_name"></a> [alert\_name](#input\_alert\_name) | Alert Name | `string` | `"Security Command Center Alerts"` | no |
+| <a name="input_function_name"></a> [function\_name](#input\_function\_name) | Name of the Cloud Function | `string` | `"scc-alerts"` | no |
+| <a name="input_function_source"></a> [function\_source](#input\_function\_source) | Cloud Function source code path | `any` | n/a | yes |
+| <a name="input_log_metric"></a> [log\_metric](#input\_log\_metric) | n/a | `string` | `"scc-alerts"` | no |
+| <a name="input_notification_channels"></a> [notification\_channels](#input\_notification\_channels) | Notification channels ID of Slack channel | `string` | `""` | no |
+| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | GCP project id | `string` | `""` | no |
+| <a name="input_pubsub_topic"></a> [pubsub\_topic](#input\_pubsub\_topic) | Pubsub topic name | `string` | `"scc-alerts"` | no |
+| <a name="input_service_account_email"></a> [service\_account\_email](#input\_service\_account\_email) | IAM service account email for the Cloud Function | `any` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
