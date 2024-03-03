@@ -4,30 +4,18 @@ on:
     branches:
       - main
 jobs:
-  tf-sec:
-    runs-on: ubuntu-20.04
+  tfsec:
+    name: tfsec
+    runs-on: ubuntu-latest
     permissions:
-        actions: read
         contents: write
         id-token: write
         pull-requests: write
-        security-events: write
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Run Trivy vulnerability scanner in IaC mode
-      uses: aquasecurity/trivy-action@master
-      with:
-        scan-type: 'config'
-        hide-progress: false
-        format: 'sarif'
-        output: 'trivy-results.sarif'
-        exit-code: '0'
-        ignore-unfixed: true
-        severity: 'CRITICAL,HIGH'
-
-    - name: Upload Trivy scan results to GitHub Security tab
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: 'trivy-results.sarif'
+      - name: Clone repo
+        uses: actions/checkout@master
+      - name: tfsec
+        uses: aquasecurity/tfsec-action@v1.0.0
+        with:
+            soft_fail: true
