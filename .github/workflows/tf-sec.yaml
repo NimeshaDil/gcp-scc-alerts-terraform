@@ -16,8 +16,7 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@master
       - name: tfsec
+        id: scan
         uses: aquasecurity/tfsec-action@v1.0.0
         with:
             soft_fail: true
-            format: 'json'
-            out: 'tfsec_output.json'
