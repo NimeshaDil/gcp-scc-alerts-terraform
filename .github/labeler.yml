@@ -1,3 +1,7 @@
-Bug:
+bug:
 - changed-files:
   - any-glob-to-any-file: '**'
+
+Documentation:
+- changed-files:
+  - any-glob-to-any-file: '**/*.md'
