@@ -21,7 +21,7 @@ This project uses Terraform to set up a Google Cloud Platform (GCP) environment 
 - Generates a random hex string to ensure a unique bucket name.
 
  Project Services Module:
-- Enables the Eventarc API for the project.
+- Enables the Eventarc API on the GCP project.
 
  Pub/Sub Topic:
 - Creates a Pub/Sub topic for event triggering.
@@ -30,7 +30,7 @@ This project uses Terraform to set up a Google Cloud Platform (GCP) environment 
 - Creates a Cloud Storage bucket for storing the function source code.
 
  Cloud Storage Bucket Object:
-- Uploads the specified function source code to the Cloud Storage bucket.
+- Uploads the specified cloud function's source code to the Cloud Storage bucket.
 
  IAM Role Binding:
 - Binds the `cloudfunctions.developer` role to a service account for Cloud Functions.
