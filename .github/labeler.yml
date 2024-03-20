@@ -6,6 +6,3 @@ bug:
 Documentation:
 - changed-files:
   - any-glob-to-any-file: '**/*.md'
-
-release:
- - base-branch: 'main'
