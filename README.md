@@ -3,7 +3,7 @@
 This project uses Terraform to set up a Google Cloud Platform (GCP) environment for Security Command Center alerts. The alerts will be notify through an existing Slack Channel.
 
 ## Features
-- Sets up required providers for GCP.
+- Sets up required Terraform providers for GCP.
 - Creates a random ID for bucket prefix. (Bucket name must me globally unique)
 - Enables [Eventarc API](https://cloud.google.com/eventarc/docs/reference/rest) for the project.
 - Creates a Google Pub/Sub topic.
