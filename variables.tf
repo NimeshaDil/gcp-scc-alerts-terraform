@@ -32,5 +32,5 @@ variable "notification_channels" {
 } 
 
 variable "function_source" {
-  description = "Cloud Function source code path"
+  description = "source code path for Cloud Function "
 }
